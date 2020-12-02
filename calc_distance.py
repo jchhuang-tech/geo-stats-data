@@ -60,8 +60,8 @@ def output_gpx(points, output_filename):
 # Kalman Filtering
 def smooth(points):
     initial_state = points[['lat', 'lon']].iloc[0]
-    observation_covariance = np.diag([0.032, 0.032]) ** 2  # TODO: shouldn't be zero
-    transition_covariance = np.diag([0.01, 0.01]) ** 2  # TODO: shouldn't be zero
+    observation_covariance = np.diag([0.005, 0.005]) ** 2  # TODO: shouldn't be zero
+    transition_covariance = np.diag([0.1, 0.1]) ** 2  # TODO: shouldn't be zero
     transition = np.diag([1, 1])  # TODO: shouldn't (all) be zero
     kf = KalmanFilter(initial_state_mean=initial_state,
                       initial_state_covariance=observation_covariance,
@@ -73,7 +73,7 @@ def smooth(points):
 
 
 def main():
-    points = read_csv(r'..\cmpt353project\location.csv')
+    points = read_csv(r'..\353FinalPrj\venv\location.csv')
     # print(points)
     smoothed_points = smooth(points)
     output_gpx(smoothed_points, 'out.gpx')
