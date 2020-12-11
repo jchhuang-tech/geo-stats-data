@@ -73,7 +73,7 @@ def smooth(points):
 
 
 def main():
-    points = read_csv(r'..\353FinalPrj\venv\location.csv')
+    points = read_csv(r'..\cmpt353project\location.csv')
     # print(points)
     smoothed_points = smooth(points)
     output_gpx(smoothed_points, 'out.gpx')
