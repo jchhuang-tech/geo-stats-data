@@ -13,10 +13,8 @@ def read_csv(csv_data):
             if line_count == 0:
                 line_count += 1
             else:
-                # print(row)
                 points.append(row)
                 line_count += 1
-    # print(points)
     df = pd.DataFrame(points, columns=['lat', 'lon'])
     df['lat'] = pd.to_numeric(df['lat'], downcast="float")
     df['lon'] = pd.to_numeric(df['lon'], downcast="float")
