@@ -83,4 +83,4 @@ def convert_to_decimal(*gps):
     return gps_d + gps_m + gps_s
 
 if __name__ == "__main__":
-    get_image_GPS(r"..\CMPT353\353FinalPrj\Prj image")
+    get_image_GPS("../CMPT353/353FinalPrj/Prj image")
