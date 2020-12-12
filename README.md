@@ -19,7 +19,6 @@ pip3 install --user pykalman
 
 ```bash
 read_image.py:             read the image and save the geometric information in the csv file 
-calc_distance.py:          read csv file and calculate the latitude and lontitude on map and make a new out.gpx to visualize using online viewer                           
 airbnb_data.ipynb:         handle airbnb data set combined with interesting_amenities.csv 
 food_chain.ipynb:          select the chain restaurant from osm folder 
 airbnb_stats.ipynb:        statistic analysis about the relationship between the amenity and density of airbnb
