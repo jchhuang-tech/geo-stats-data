@@ -2,13 +2,13 @@
 ## Program manual: 
 ```bash
 How to run code: IDE: Jupyter notebook(all .ipynb could see on web page)
-For python file running: 
-    python read_image.py
+For the read_image.py file: 
+    python3 read_image.py
     
-    it will automatically read the image from the image folder to make a new file called location.csv
-    since we have limited storage on the repository, so we did not upload the image folder.
+    we did not upload the photos to the Git repository because they are too large(>400 MB), so the code would not run.
+    but with the photos, it would automatically read the photos from the photos directory to make a new file called photos.csv
 ```
-## Library you need to install(module):
+## Libraries/modules you need to install:
 ```bash
 pip3 install numpy
 sudo apt-get install python3 python3-dev python3-pip
@@ -16,13 +16,14 @@ pip3 install --user scipy matplotlib pandas statsmodels scikit-learn jupyter
 pip install seaborn
 pip install plotly
 pip3 install --user pykalman
+pip install exifread
 ```
 ## Code functionality introduction:
 
 ```bash
-read_image.py:             Read the image and save the geometric information in the path.csv file 
+read_image.py:             Read the image and save the geometric information in the photos.csv file 
 airbnb_data.ipynb:         Handle airbnb data set combined with interesting_amenities.csv 
-food_chain.ipynb:          Select the chain restaurant from osm folder 
-airbnb_stats.ipynb:        Statistic analysis about the relationship between the amenity and density of airbnb
-nearby_amenities.ipynb:    Filter some useful and interesting place to produce a file called interesting_amenities. csv
+food_chain.ipynb:          Handle the chain restaurants from osm folder 
+airbnb_stats.ipynb:        Statistic analysis about the relationship between the amenity and airbnb
+nearby_amenities.ipynb:    Filter some useful and interesting places and find nearby amenities
 ```

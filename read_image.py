@@ -43,8 +43,8 @@ def image_read(path):
         return [GPS['GPSLatitude'], GPS['GPSLongitude']]
 
 def write_to_csv(points):
-    path = "location.csv"
-    csv_head = ["Latitude", "Longitude"]
+    path = "photos.csv"
+    csv_head = ["lat", "lon"]
     # Fix the extra space
     with open(path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
@@ -83,4 +83,4 @@ def convert_to_decimal(*gps):
     return gps_d + gps_m + gps_s
 
 if __name__ == "__main__":
-    get_image_GPS("../CMPT353/353FinalPrj/Prj image")
+    get_image_GPS("tmp/photos")
